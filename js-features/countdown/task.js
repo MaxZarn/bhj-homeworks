@@ -6,8 +6,10 @@ const setTimer = function() {
         timer.textContent = timer.textContent - 1;
     } else {
         alert('Вы победили в конкурсе!');
+        clearInterval();
     }
 };
+
 
 setInterval(setTimer, 1000);
 

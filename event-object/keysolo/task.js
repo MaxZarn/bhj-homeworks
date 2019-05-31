@@ -17,6 +17,19 @@ class Game {
   }
 
   registerEvents() {
+
+    let k = String.fromCharCode(event.keyCode);
+      let symbol = this.currentSymbol.querySelector('span.symbol');
+      let array =Array.from(symbol); 
+    document.addEventListener('keydown', (event) => {
+      if (symbol === k) {
+        return this.success();
+      } else {
+        return this.fail();
+      };
+      });
+    
+
     /*
       TODO:
       Написать обработчик события, который откликается
