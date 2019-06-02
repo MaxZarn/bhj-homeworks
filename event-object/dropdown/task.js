@@ -11,6 +11,7 @@ dropdownValue.addEventListener('click', function() {
 for (const link of dropdownLink) {
     link.onclick = function() {
         dropdownValue.textContent = link.textContent; 
+        dropdownList.classList.toggle('dropdown__list_active');
         return false;
     };
 };

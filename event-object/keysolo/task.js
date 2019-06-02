@@ -18,15 +18,14 @@ class Game {
 
   registerEvents() {
 
-    let k = String.fromCharCode(event.keyCode);
-      let symbol = this.currentSymbol.querySelector('span.symbol');
-      let array =Array.from(symbol); 
     document.addEventListener('keydown', (event) => {
-      if (symbol === k) {
-        return this.success();
+      let key =  String.fromCharCode(event.keyCode).toLowerCase();
+      let symb = this.currentSymbol.textContent.toLowerCase();
+      if (symb === key) {
+         this.success();
       } else {
-        return this.fail();
-      };
+          this.fail();
+        }; 
       });
     
 
